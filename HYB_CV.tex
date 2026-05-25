@@ -1,0 +1,629 @@
+\documentclass[12pt,a4paper]{article}
+
+%COMPILING: IMPORTANT INFORMATION
+% You'll need to generate a .bbl file from
+% the .bib file first, otherwise the publications
+% will not show up in the cv.
+
+% in TeXstudio, this means
+% 1. F1 or F6 for usual compiling (generate .aux)
+% 1. F8 for bibliography compiling (generate .bbl)
+% 2. F1 or F6 for usual compiling once more(generate .pdf)
+
+% use your favourite citation style here
+\usepackage{apacite}
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\newcommand{\headingfont}{\Large\color{OliveGreen}}
+
+\usepackage[dvipsnames]{xcolor}
+
+
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.17in}}}{\end{list}}
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+
+
+% as suggested by the following two links:
+%https://tex.stackexchange.com/questions/227933/using-bibentry-to-cite-in-text-reference-with-apacite
+% and
+%https://tex.stackexchange.com/questions/65348/clash-between-bibentry-and-hyperref-with-bibstyle-elsart-harv/65401#65401
+\usepackage{bibentry}
+\makeatletter\let\saved@bibitem\@bibitem\makeatother
+\usepackage[colorlinks=true]{hyperref}
+\makeatletter\let\@bibitem\saved@bibitem\makeatother
+
+\interlinepenalty=10000 
+
+% hanging publications: 1st line starts at beginning of line, 
+% further lines are placed a bit to the right
+\usepackage{hanging}
+\newcommand\publication[1]{%
+    \smallskip\par\hangpara{1.5em}{1}\bibentry{#1}\smallskip
+}
+
+\usepackage{array,longtable,amsmath}
+
+\renewcommand{\baselinestretch}{1.2}
+
+
+\begin{document}
+
+
+\begin{center}
+{\Huge Haim Bar, Ph.D.}\\
+Associate Professor\\Department of Statistics\\
+University of Connecticut\\\vspace{5mm}
+haim.bar@uconn.edu   $\;\boldsymbol{\cdot}\;$ https://haim-bar.uconn.edu $\;\boldsymbol{\cdot}\;$  https://github.com/haimbar 
+\end{center}
+
+\section*{\sc{\headingfont Research Interests}}
+Statistical models; shrinkage estimation; Bayesian high-dimensional data; high throughput applications in
+biology; % (e.g., genomics, brain imaging); applications in econometrics; 
+Bayesian statistics; machine learning.
+
+
+\section*{\sc{\headingfont  Education}}
+{\bf Cornell University}, Ithaca, New York USA.  Statistics: Ph.D. 2012, M.Sc. 2010.\\
+{\bf Yale University}, New Haven, Connecticut USA. M.Sc. in Computer Science.\\
+{\bf The Hebrew University}, Jerusalem, Israel. B.Sc. in Mathematics, Cum Laude.
+
+\section*{\sc{\headingfont  Academic Experience}}
+
+\noindent{\bf University of Connecticut}, Storrs, Connecticut, USA.
+\begin{list1}
+\item[]  2019 -- Present: Associate Professor.
+\item[] 2013 -- 2019: Assistant Professor. 
+\begin{list2}
+\item[] I am an associate professor at the University of Connecticut, in the Department of Statistics. I am affiliated with
+the Institute for Systems Genomics (ISG),  the Institute for Collaboration on Health, Intervention, and Policy (InCHIP),
+and the CT Institute for the Brain and Cognitive Sciences (IBACS).
+\item[] Teaching: STAT 5005: Introduction to Applied Statistics;  
+STAT 5505: Applied Statistics I;
+STAT 5605: Applied Statistics II;
+STAT 3515Q/5515: Design of Experiments; % (\textit{Excellence in teaching recognition - Spring 2014, Spring 2017});
+STAT 3675Q: Statistical Computing; % (\textit{Excellence in teaching recognition - Spring 2016});
+STAT/BIST 5225: Data Management in SAS and R; % (\textit{Excellence in teaching recognition - Fall 2017});
+STAT/BIST 5215: Statistical Consulting; % (\textit{Excellence in teaching recognition - Spring 2018, Fall 2018});
+STAT 5615: Categorical Data Analysis.
+\end{list2}
+\end{list1}
+
+\noindent{\bf The Hebrew University}, Jerusalem, Israel.
+2022 (May-August). Visiting faculty.
+
+
+\noindent{\bf Cornell University}, Ithaca, New York, USA.
+\begin{list1}
+\item[]  2011 -- 2013:  Statistical Consultant.
+\begin{list2}
+\item[] As a member of the Cornell Statistical Consulting Unit (CSCU) I provided
+statistical consulting to Cornell faculty and staff.  I handled a diverse range
+of applications, including economics, business, genomics, nutrition, sociology,
+etc. I presented a wide range of topics in workshops, and as a guest lecturer in
+courses at Cornell, including on Bayesian statistics, missing data, multiple
+testing, etc.
+\item[] Teaching: BTRY 6020: Statistical Methods II.
+\end{list2}
+\item[] 2012 -- 2013: PostDoc, Department of Statistical Science
+\begin{list2}
+\item[] I collaborated with the Melnick Lab at the Weill Cornell Medical College.
+I developed new methods and applied existing
+techniques to analyze very large data sets involving up to millions of
+features.  Primarily, we focused on methylation data for epigenetic
+analysis, and RNA sequencing for transcription regulation analysis.
+\end{list2}
+\end{list1}
+
+
+%\vspace{-.3cm}
+%{\em Research Assistant} \hfill {\bf July 2011 - December, 2011}
+%\begin{list1}
+%\item[] I worked with Professor Francesca Molinari on the theory and application
+%of sharp identification regions.  Implemented a fast and accurate estimation
+%method based on Support Vector Machines.   We applied the method to linear
+%prediction, and game theory problems.
+%\end{list1}
+%
+%\vspace{-.3cm}
+%{\em Graduate Student} \hfill {\bf August 2005 - December 2011}
+%\begin{list1}
+%\item[] M.Sc. and Ph.D.~ programs.
+%\end{list1}
+%
+%\vspace{-.3cm}
+%{\em Head Teaching Assistant} \hfill {\bf August 2009 - December 2010}
+%\begin{list1}
+%\item[] BTRY 6010, Statistical Methods I (\textit{Outstanding TA
+%Award} 2010-2011).
+%%Responsibilities included preparing lab and homework material; administrative
+%%management; and supervising four teaching assistants.
+%\end{list1}
+%
+%
+%\vspace{-.3cm}
+%{\em Teaching Assistant} \hfill {\bf August, 2005 - May 2010}
+%\begin{list1}
+%\item[] BTRY 6020, Statistical Methods II (graduate level class).
+%\item[] BTRY 6010, Statistical Methods I (graduate level class).
+%\item[] ORIE 474, Statistical Data Mining.
+%\item[] CS 101M, Introduction to Computer Programming
+%(\textit{Outstanding TA Award}, 2006).
+%\item[] MATH 335/COMS 480, An Introduction to Cryptology.
+%\end{list1}
+
+
+
+    % bibliography
+    \nobibliography{hbrefs.bib}
+    \bibliographystyle{apacite} 
+
+    \section*{\sc{\headingfont Publications}}
+
+    % optional: split into different subsections for
+    % peer-reviewed articles, conference abstracts, ...
+
+    % example with links
+%        (\href{https://arxiv.org/abs/1706.06969}{link}, \href{https://arxiv.org/pdf/1706.06969.pdf}{pdf}, \href{https://github.com/rgeirhos/object-recognition}{data and materials})
+
+    % example without links
+\publication{MCAP26}
+\publication{NAR2025}
+\publication{Bar15052025}
+\publication{Frontiers2025}
+\publication{kane_2025}
+\publication{bar_ting_2025}
+\publication{HMM2024} % add volume, issue, number
+\publication{BMCBioinformatics2024}
+\publication{axioms13090641}
+\publication{ConvGeom2023}
+\publication{bar_yan_2023}
+\publication{Witherow2023}
+\publication{Fumagalli2023}
+\publication{BARRETT2022}
+\publication{KATNENI2022}
+\publication{nutrients2021}
+\publication{QREM}
+\publication{GenMed2021}
+\publication{AJHG2021}
+\publication{JDS2021}
+\publication{PlosOne2021}
+\publication{Environmetrics2021}
+\publication{SEMMS}
+\publication{SLAS2020}
+\publication{THROMRES2020}
+\publication{JMB2020}
+\publication{F1000Research}
+\publication{ijms2019}
+\publication{SciRep2019}
+\publication{STAT2019}
+\publication{AEM2019}
+\publication{MGGM2019}
+\publication{JMB2019}
+\publication{CHM2019}
+\publication{WICS2019}
+\publication{AJPGP2019}
+\publication{ASMBI2018}
+\publication{CDN2018}
+\publication{JASA2017}
+\publication{CE2017}
+\publication{EPP2017}
+\publication{ArchToxicol2017}
+\publication{Haemophilia2017}
+\publication{Nutrients2016}
+\publication{MHR2016}
+\publication{ICSA2004}
+\publication{JASA2014}
+\publication{RepSci2014}
+\publication{PlosOne2014}
+\publication{PLANTCELL2014}
+\publication{JFE2014}
+\publication{BLOOD2013}
+\publication{SIM2012}
+\publication{SAGMB2012}
+\publication{PlosOne2012b}
+\publication{FASEB2012}
+\publication{PlosOne2012}
+\publication{StatMod2011}
+\publication{FASEB2011}
+\publication{JEB2011}
+\publication{STS2010}
+\publication{BioresTech2011}
+\publication{IEEE2003}
+
+    % the cumbersome way
+%   \hangpara{1.5em}{1}Knuth, D. E. (1998). 
+%   \textit{The art of computer programming: sorting and searching} (Vol. 3). Pearson Education.
+
+
+\section*{\sc{\headingfont Under review or in preparation}}
+
+\begin{list1}
+%\item[-] Bar, H. \textit{Interprocess Communication – How to Talk to Your Programs}. \textbf{Revise and resubmit}.
+%\item[-] Bar, H.; Booth, J.; Wells, M.T. \textit{Automated Model Building and Goodness-of-fit via Quantile Regression}.
+%\item[] Liu, K.; Bar, H.  \textit{Large-P Variable Selection in Two-Stage Models}.
+\item[-] Nguyen, H.,  Bar, H.,  Chi, Z,  Pozdnyakov, V. \textit{A Time-Varying Branching Process Approach to Model Self-Renewing Cells}. 
+\item[-] Bar, H., Nguyen, H., Conover, J. \textit{A State Model for the Analysis of Stem CellProliferation and Differentiation}
+%\item[-] Jamie
+%\item[-] Assaf
+\end{list1}
+  
+
+\section*{\sc{\headingfont Grants and Contracts}}
+\begin{list1}
+\item[-] Research Foundation of The City University of New York, (May 1, 2024 - April 30, 2027). \textit{Interaction of Choline and Fat in the Prenatal Programming of Nonalcoholic Steatohepatitis}, Funding amount: \$113,536 .
+\item[-] CLAS Research in Academic Themes 2024 funding initiative (January 2024-June 2024). PI. \textit{The Blessing of Dimensionality - Theory of Convex Geometry and Concentration of Measure with Applications in Machine Learning, Finance, and Genomics}. Funding amount \$30,000.
+\item[-] BlackRock Inc. additional funding for \textit{The Blessing of Dimensionality - Theory of Convex Geometry and Concentration of Measure with Applications in Machine Learning, Finance, and Genomics}. Funding amount \$15,000.
+
+\item[-] CLAS Research in Academic Themes 2022 funding initiative (January 2023-June 2024). PI. \textit{A novel statistical approach to uncover the hidden language of long non-coding RNAs}. Funding amount \$49,725.
+\item[-] IBACS Seed Grant. PI. \textit{Modeling and visualizing the formation of brain cavities covering from stem cells.} Funding period: 1/1/2022-12/31/2022. Funding amount \$18,516.
+\item[-] NIH Award: \textit{Characterization of the ventricular-subventricular stem cell niche during human brain development}. 
+PI: J. Conover. H. Bar (co-Investigator.) Funding period: April 2020-March 2024. %Funding amount \$2,010,500.
+\item[-] NSF Award  1612625. PI. \textit{Variable Selection in the High Dimensional, Low Sample Size Setting - Beyond the Linear Regression and Normal Errors Model.}
+Funding period: 8/15/16-7/31/19. Funding amount \$150,000.
+\item[-] National Science Center - Poland.
+\textit{Identification of transcriptomic markers of maize resistance to cereal aphids}.
+PI Dr. Hubert Sytykieticz.
+Funding period: 2/9/17-2/8/20.
+\item[-] Travelers.
+\textit{Modeling and analysis of large insurance claim and occurrence data: A partnership between UConn and Travelers}. 2018 -- PI: Dr. Dipak Dey, co-PIs: Haim Bar, Kun Chen, Elizabeth Schifano, Xiaojing Wang.
+Funding period: 8/1/17-7/31/18. Funding amount \$137,881.
+2019 -- PI: Dey, D. Co-Investigators: Haim Bar, Kun Chen,  Victor
+Hugo Lachos Davilla. Funding period: 8/1/2018 - 7/31/2019. Funding amount \$146,451.
+ \end{list1}
+
+
+\section*{\sc{\headingfont Patents}}
+\begin{list1}
+\item[-] U.S. Patent 20230041627 A1 (Publication Date: February 9, 2023)\\
+{\em Assay Compound Screening.}
+\item[-] U.S. Patent 9384677 (granted July 5, 2016)\\
+U.S. Patent 20150213730 A1 (Publication Date: July 30, 2015)\\
+U.S. Patent 9076342 B2 (granted July 7, 2015)\\
+U.S. Patent 20090208910 A1 (Publication Date: August 20, 2009)\\
+{\em Automated execution and evaluation of network-based training exercises.}\\
+Inventors: Brueckner, S. K.; Adelstein, F. N.; Bar, H.; Donovan, M.
+\item[-] U.S. Patent 20150143355 (Publication Date: May 21, 2015)\\
+{\em Service Oriented Architecture Version and Dependency Control.}\\
+Inventors: Tingstrom, D. J.; Joyce, R. A.; Stillerman, M. A.; Brueckner, S. K.; Bar, H.
+\item[-] U.S. Patent 8,984,396 (granted March 17, 2015)\\
+{\em Identifying and representing changes between extensible markup language (XML) files using symbols with data element indication and direction indication.}\\
+Inventors: Tingstrom, D. J.; Joyce, R. A.; Stillerman, M. A.; Brueckner, S. K.; Bar, H.
+\item[-] U.S. Patent 8,898,285 (granted November 25, 2014)\\
+{\em Service oriented architecture version and dependency control}\\
+Inventors: Tingstrom, D. J.; Joyce, R. A.; Stillerman, M. A.; Brueckner, S. K.; Bar, H.
+\item[-]  U.S. Patent 8,286,249 (granted October 9, 2012)\\
+U.S. Patent 7,748,040 (granted June 29, 2010);\\
+{\em Attack correlation using marked information.}\\
+Inventors: Adelstein F. N., Bar H., Alla P. and Proskourine N.
+\end{list1}
+
+\section*{\sc{\headingfont Short Courses}}
+\begin{list1}
+\item[-] Data Science. University of Connecticut, Pre-College Summer, 2022-2024.
+\item[-] Advanced statistical modeling ideas (session on missing data). The University of Barcelona, Spain. January, 2019.
+\item[-] Advanced topics in R and Machine Learning. The Technion, Haifa, Israel. July, 2018.
+\item[-] R/Bioconductor workshop - the Technion, Haifa. November, 2016 (co-taught with Dr. Martin Morgan).
+\end{list1}
+
+
+\section*{\sc{\headingfont Invited Talks}}
+\begin{list1}
+\item[]\textit{High Dimensional Space Oddity.} 
+\begin{list2}
+\item[-] The Joint Statistical Modeling, Nashville, TN (August, 2025).
+\item[-] Statistics Department Colloquium, UConn (October, 2024).
+\end{list2}
+\item[]\textit{On graphical models and convex geometry.}
+\begin{list2}
+\item[-] Consortium for Data Analytics in Risk, Berkeley, CA. November, 2023.
+\item[-] SIAM Conference on Financial Mathematics and Engineering. Philadelphia, PA. June, 2023.
+\item[-] Mathematics and Statistics Department, Old Dominion University. March, 2023.
+\item[-] Statistics Department, The Hebrew University, Jerusalem, Israel. June 2022.
+\end{list2}
+\item[] \textit{Large-P Variable Selection in Two-Stage Models.}
+\begin{list2}
+\item[-] CMStatistics, London, UK,  December 2020.
+\item[-] University of Connecticut, March 2020.
+\item[-] University of Haifa, Israel. May, 2020.
+\end{list2}
+\item[] \textit{Quantile Regression Modelling via Location and
+Scale Mixtures of Normal Distributions.}
+\begin{list2}
+\item[-] Cornell University, October 2019.
+\end{list2}
+\item[] \textit{A Mixture Model to Detect Edges in Sparse Co-expression Graphs.}
+\begin{list2}
+\item[-] The 3rd Eastern Asia Meeting on Bayesian Statistics, Seoul, South Korea. July, 2018.
+\item[-] Yonsei University, Seoul, South Korea. July, 2018.
+\item[-] Korea University, Seoul, South Korea. July, 2018.
+\item[-] Bayesian Modeling, Computation, and Applications, Storrs, CT, May 2018.
+\end{list2}
+\textit{A Scalable Empirical Bayes Approach to Variable
+Selection in Generalized Linear Models.}
+\begin{list2}
+\item[-] The 34th Quality and Productivity Research Conference, Storrs, CT, June 2017.
+\item[-] The 10th ICSA International Conference, Shanghai, China. December, 2016.
+\item[-] Temple University, Research Colloquium, Department of Statistical Science, April 2017.
+\item[-] Baruch College, CUNY, Colloquium, Department of Information Systems and Statistics Zicklin School of Business, November 2016.
+\end{list2}
+\item[]\textit{A Scalable Empirical Bayes Approach to Variable Selection.}
+\begin{list2}
+\item[-] 2016 Joint Statistical Meetings, Chicago, IL. July, 2016.
+\item[-] Joint UCONN/UMASS Statistics Colloquium, University of Massachusetts Amherst, MA. October 7, 2015
+\item[-] Statistics Seminar, Department of Mathematics - University of Maryland. October 1, 2015.
+\item[-] Colloquium - Mathematical Biosciences Institute - The Ohio State University.
+Sep. 21, 2015
+\end{list2}
+\item[]\textit{An Empirical Bayes Approach to Variable Selection and QTL Analysis.}
+\begin{list2}
+\item[-] Purdue University, Research Colloquium, Statistics Department, October 2014.
+\item[-] Modern Modeling Methods ($M^3$) Conference, Storrs, CT, May 2014.
+\end{list2}
+\item[]\textit{Model-based approaches for big-data problems, with applications in genomics.}
+\begin{list2}
+\item[-] University of Connecticut, Institute for Systems Genomics Annual Networking Workshop. Storrs, CT. May 13, 2014.
+\end{list2}
+\textit{A Bivariate Model for Simultaneous Testing in Bioinformatics Data}
+\begin{list2}
+\item[-] 3rd International Conference and Exhibition on Biometrics \& Biostatistics, Baltimore, MD, October 2014.
+\item[-] University of Iowa, February 2013
+\item[-] NIH/NCI, March 2013
+\item[-] University of Connecticut, February 2013
+\item[-] University of Rochester, February 2013
+\item[-] Cornell University, October 2012
+\end{list2}
+\begin{list2}
+\item[-]\textit{Accounting for Heaping in Retrospectively Reported Event Data - A
+Mixture Model Approach.}
+ICSA Applied Statistics Symposium in New York City, NY, USA. June 2011.
+\end{list2}
+\textit{A Heap of Trouble? Accounting for Mismatch Bias in Retrospectively
+Collected Data on Smoking.}
+\begin{list2}
+\item[-] 3rd Biennial Conference of the American Society of Health Economists, Ithaca, NY,
+June 2010.
+\end{list2}
+\end{list1}
+
+\section*{\sc{\headingfont Conference Presentations}}
+\begin{list1}
+\item[-] \textit{An Empirical Bayes Approach to Variable Selection and QTL Analysis}. Frontiers Of Hierarchical Modeling In Observational Studies, Complex Surveys And Big Data: A Conference Honoring Professor Malay Ghosh. College Park, MD. May 29-31, 2014.
+\item[-] \textit{A Mixture-Model Approach for Testing for Unequal Variances in Microarray
+Data.}
+Conference of Applied Statistics Ireland, Galway, Ireland, 2011.
+\item[-] \textit{An Empirical Bayes Approach to Variable Selection and QTL Analysis.}
+In the Proceedings of the 25th International Workshop on Statistical Modelling,
+Glasgow, Scotland, 2010.
+\end{list1}
+
+\section*{\sc{\headingfont Journal Referee}}
+Annals of Applied Statistics;
+Bayesian Analysis;
+Bioinformatics;
+Biometrics;
+Behavior Research Methods;
+BMC bioinformatics;
+Conservation Biology;
+Evaluation and Program Planning;
+International Journal of Environmental Research and Public Health;
+International Statistical Review;
+Journal of Agricultural, Biological, and Environmental Statistics;
+Journal of Computational and Graphical Statistics;
+Journal of Statistical Modeling;
+Journal of Statistical Planning and Inference;
+Journal of Statistical Theory and Practice;
+Journal of the American Statistical Association;
+Methodology \& Computing in Applied Probability;
+PLOS ONE;
+Statistical Analysis and Data Mining;
+Statistical Modelling;
+Statistics and Its Inference;
+Statistics in Medicine;
+Stats.
+
+\section*{\sc{\headingfont Referee - Other}}
+\begin{list1}
+\item[-] National Science Foundation (NSF), CISE.
+\item[-] National Science Foundation (NSF), 2017.
+\item[-] The Donaghue Medical Research Foundation:\\
+ \hspace*{5mm}``Greater Value Portfolio'' - Review Board Member, 2015, 2016, 2017.\\
+ \hspace*{5mm}``Another Look'' - Review Board Member, 2016.
+\item[-] National Aeronautics and Space Administration - Review Board Member, 2016.
+\item[-] International Chinese Statistical Association - Student Award Committee for the 2016 ICSA International Conference in Shanghai, China, Dec. 19-22, 2016.
+\item[-] New England Statistics Symposium - IBM Student Award Committee, 2015.
+\end{list1}
+
+
+
+
+
+%
+\section*{\sc{\headingfont Conference Activities}}
+\begin{list1}
+\item[-] Organizer: The Blessings of Dimensionality Workshop, University of Connecticut, Storrs, CT, 2024.
+\item[-] Organizing committee: The Department of Statistics 60th anniversary, University of Connecticut, Storrs, CT, 2022.
+\item[-] Organizing committee: The 33rd New England Statistics Symposium, Hartford, CT, 2019.
+\item[-] Co-chair of the organizing committee: The 31st New England Statistics Symposium, Storrs, CT, 2017.
+\item[-] Co-chair of the organizing committee: The 34th Quality and Productivity Research Conference, Storrs, CT, 2017.
+\item[-] Session chair - Joint Statistical Meeting, 2016 (Chicago, IL).
+Session title: R Tools for Statistical Computing
+\item[-] Session chair - Joint Statistical Meeting, 2015 (Seattle, WA).
+Session title: Methods in Machine Learning and Data Mining.
+\item[-] Session chair - 3rd International Conference and Exhibition on Biometrics \&
+ Biostatistics, 2014.
+\end{list1}
+
+\section*{\sc{\headingfont Department and University Committees}}
+\begin{list1}
+\item[] Distinguished Statistician Colloquium - the Pfizer Series (Chair).
+\item[] Graduate program curriculum - applied statistics (Chair).
+\item[] Computing (Chair).
+\item[] New England Statistics Society.
+\item[] New England Statistics Symposium, 2017.
+\item[] Gratis faculty appointment (Chair).
+\item[] Visiting assistant professor search committee.
+\item[] Graduate students and distinguished alumni awards.
+\item[] UConn's Q-Center.
+\item[] Environmental health and safety (Chair).
+\item[] Library / tech reports (Chair).
+\end{list1}
+
+\section*{\sc{\headingfont Other Services}}
+\begin{list1}
+\item[] College of Liberal Arts and Sciences. Research Advisory Committee AY22-23.
+\item[] The New England Journal of Statistics in Data Science - Software section. Editor.
+\item[] Data Science in Science. Associate Editor.
+\item[] Sankhya Series A, the Indian Journal of Statistics. (2018-2021) Associate Editor.
+\item[] Health Policy Statistics Section communication officer (July 2016-June 2019).
+\item[] Health Policy Statistics Section - best student paper review board (for JSM 2017).
+\item[] The 10th ICSA International Conference - Young Researcher Award review committee.
+\item[] New England Statistics Society - co-chair of the committee to establish the society's journal.
+\item[] Eastern North American Region (ENAR) 2019: Program committee member. (2018).
+\end{list1}
+
+
+
+\section*{\sc{\headingfont Ph.D. Advising}}
+\begin{list1}
+\item[] Kangyan Liu, 2019 (major advisor)
+\item[] Paul McLaughlin, 2019 (major advisor)
+\item[] Cheng Huang, 2022 (associate advisor)
+\item[] Srawan Bishoni, 2022 (associate advisor)
+%\item[] Katherine Zavez (associate advisor)
+\item[] Ziqi Yang, 2021  (associate advisor)
+\item[] Ellis Shaffer, 2020 (associate advisor)
+\item[] Zhe Wang, 2020  (associate advisor)
+\item[] Dakota Cintron, 2020  (associate advisor)
+\item[] Chaoran Hu, 2020  (associate advisor)
+\item[] Yulia Sidi, 2020  (associate advisor)
+\item[] Jieying Jiao, 2020  (associate advisor)
+\item[] Renjie Chen, 2019 (associate advisor)
+\item[] Ruochen Zha, 2018 (associate advisor)
+\item[] chongliang Luo, 2017 (associate advisor)
+\item[] Aditya Mishra, 2017 (associate advisor)
+\item[] Neha Mishra, 2017 (associate advisor)
+\item[] Chantal Larose, 2015 (associate advisor)
+\item[] Guang Ouyang, 2015 (associate advisor)
+\end{list1}
+
+
+\section*{\sc{\headingfont Professional Experience}}
+ %{\bf Sunbird Software Consulting}, Ithaca, NY
+%
+% \vspace{-.3cm}
+% {\em Consultant} \hfill {\bf December 2007 - April 2011}\\
+% Provided software and statistical consulting to FreePatentsOnline.com and
+%Appinions.com.
+% \\ FreePatentsOnline.com provides on-line users with access to a large
+%database of patents.
+% My responsibilities included the integration of the German patent data, and
+%the development of a patent-family database (using the DOCDB database from the
+%European Patent Office).
+% \\ Appinions.com uses state-of-the-art natural language processing tools to
+%extract sentiments from documents.  I worked on the O2O project (Opinions to
+%Outcomes), where I designed and developed software that performed statistical
+%analysis to detect significant changes in sentiment toward publicly traded
+%companies, as reflected in on-line publications, such as blogs and news feeds.
+
+\noindent{\bf ATC-NY}, Ithaca, New York, USA.
+\begin{list1}
+\item[]  2003 -- 2010:  Principal Scientist.
+\begin{list2}
+\item[] Involved in several government-funded research projects, mostly related to
+secure and survivable computer systems.  For example, in the SPRINT project
+(``Secure Programming Using Artificial Intelligence Techniques'') I designed and
+prototyped a tool to support secure programming with SPARK (SRI's Procedural
+Agent Realization Kit).
+ In ``Policy Projector'', a Phase I OSD-funded effort, I was involved in the
+design of a tool that rapidly reveals potential problems with network policy
+changes prior to their implementation.  In ``Software Pedigree Analysis''
+(SPAN), a DARPA Phase I SBIR effort, I developed a prototype that maintains
+software pedigree to support future forensic investigations; and in ``Active
+Smart Targets for Effective Response'' (ASTER), a DARPA-funded Phase II SBIR, I
+developed a prototype to identify hackers by feeding them traceable information
+during exploratory probes.
+\end{list2}
+\end{list1}
+
+
+  
+\noindent{\bf MicroPatent LLC}, East Haven, Connecticut USA.
+\begin{list1}
+\item[]  2002 -- 2003:  Director of Software Development.
+\begin{list2}
+\item[] Responsible for all software development projects, leading a team of 15-20
+programmers.
+Designed and implemented an extensive patent-family database with over 50
+million records, merging several different sources of data. Developed analytical
+tools for advanced patent searchers.
+\end{list2}
+\item[] 2000 -- 2002: Special Projects Manager.
+\begin{list2}
+\item[] Led a team of five people to develop a large-scale system to deliver patent
+databases in XML format.  The project included designing a database, writing a
+program to convert the data to XML, writing programs to validate the XML, and
+programs to automate and monitor the delivery process.
+\end{list2}
+\item[] 1999 -- 2000: Team Leader
+\begin{list2}
+\item[] Led a team that designed and implemented comprehensive patent and trademarks
+databases and web interfaces.  In addition to developing web-based applications,
+I was involved in other projects, including the design and implementation of a
+Client/Server application to provide customers with direct access to the patent
+database (using OpenText's ``Bibliographic Retrieval Services (BRS)/Search'');
+design and implementation of an SQL-based database to save user queries, and a
+corresponding web interface that allows users to construct complicated searches
+by combining results from previous searches, and share searches with colleagues;
+and an information-theoretic approach to improve retrieval of records.
+\end{list2}
+\item[] 1997 -- 1999: Unix Programmer
+\begin{list2}
+\item[] Involved in almost all the development projects in the company, including
+programs to enable our web customers to download patent data in PDF format (the
+first web site in the industry to do that), and in Lotus Notes format.
+\end{list2}
+\end{list1}
+
+
+
+\noindent{\bf Motorola Israel - Wireless Access Systems Division}, Tel Aviv, Israel.
+\begin{list1}
+\item[]  1995 -- 1997:  Software Engineer.
+\begin{list2}
+\item[] As part of the Software Quality Assurance (SQA) team in the ``Wireless Local
+Loop'' (WiLL) project, I was involved in a wide range of activities, including
+extensive test and integration of wireless and land telephony systems, from the
+operating system of the base stations to the end-user wireless equipment;
+software engineering practices and procedures; writing a graphic user interface
+for the WiLL system; writing a program to automate the analysis of massive log
+files in order to detect anomalies;
+and integration and testing of an encryption device in the fixed wireless
+terminals.
+\end{list2}
+\end{list1}
+
+
+
+\section*{\sc{\headingfont Other Skills}}
+Statistical Packages:  R, BUGS, Matlab, JMP, SAS, Stata, SPSS.\\
+Programming languages:  Pyhton, C, Perl, Java, JavaScript, Unix shell scripts, SQL, PHP,
+HTML/XML, Tcl/Tk.
+
+\vspace{2in}
+Updated on \today
+
+
+\end{document}

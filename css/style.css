@@ -1,0 +1,263 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:   #002147;
+  --blue:   #0055a5;
+  --blue-lt:#3378c5;
+  --accent: #e8a020;
+  --bg:     #ffffff;
+  --bg-alt: #f4f6f9;
+  --border: #d0d7e2;
+  --text:   #222222;
+  --muted:  #555555;
+  --link:   #0055a5;
+  --link-h: #003880;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--link-h); text-decoration: underline; }
+
+/* ===== Header ===== */
+header {
+  background: var(--navy);
+  color: #fff;
+  padding: 1.5rem 2rem 0;
+}
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.site-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  color: #fff;
+}
+
+.site-title a { color: #fff; }
+.site-title a:hover { text-decoration: none; color: #cce0ff; }
+
+.site-subtitle {
+  font-size: .95rem;
+  color: #a8c4e8;
+  margin-top: .2rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== Navigation tabs ===== */
+nav {
+  margin-top: .8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  display: block;
+  padding: .55rem 1.1rem;
+  color: #cce0ff;
+  font-size: .92rem;
+  font-weight: 500;
+  border-radius: 4px 4px 0 0;
+  transition: background .15s, color .15s;
+}
+
+nav ul li a:hover {
+  background: rgba(255,255,255,.15);
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a.active {
+  background: var(--bg);
+  color: var(--navy);
+  font-weight: 700;
+}
+
+/* ===== Main content ===== */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+/* ===== Home page: two-column layout ===== */
+.home-grid {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin-top: .5rem;
+}
+
+@media (max-width: 640px) {
+  .home-grid { grid-template-columns: 1fr; }
+}
+
+.profile-photo {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+
+.profile-photo-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--bg-alt);
+  border: 2px dashed var(--border);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: .85rem;
+  text-align: center;
+}
+
+.contact-block {
+  margin-top: 1.2rem;
+  font-size: .9rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.contact-block strong { color: var(--text); display: block; margin-bottom: .3rem; font-size: .95rem; }
+
+h1 { font-size: 1.55rem; color: var(--navy); margin-bottom: .9rem; }
+h2 { font-size: 1.2rem; color: var(--navy); margin: 1.8rem 0 .7rem; border-bottom: 2px solid var(--border); padding-bottom: .3rem; }
+h3 { font-size: 1rem; color: var(--navy); margin: 1.2rem 0 .4rem; }
+
+p { margin-bottom: .9rem; }
+
+/* ===== Publications ===== */
+.year-group { margin-bottom: 2.2rem; }
+
+.year-label {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--blue);
+  border-left: 4px solid var(--accent);
+  padding-left: .6rem;
+  margin-bottom: 1rem;
+}
+
+.pub-list { list-style: none; }
+
+.pub-item {
+  padding: .75rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: .93rem;
+}
+
+.pub-item:last-child { border-bottom: none; }
+
+.pub-title { font-style: italic; }
+.pub-authors em { font-style: normal; font-weight: 600; }
+.pub-journal { color: var(--muted); }
+.pub-doi a { font-size: .82rem; color: var(--blue-lt); }
+
+/* ===== Talks & Patents ===== */
+.talk-list, .patent-list { list-style: none; }
+
+.talk-item, .patent-item {
+  padding: .6rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: .93rem;
+}
+
+.talk-item:last-child, .patent-item:last-child { border-bottom: none; }
+
+.talk-title { font-style: italic; font-weight: 600; }
+
+/* ===== Software ===== */
+.software-list { list-style: none; }
+
+.software-item {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.1rem 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.software-name { font-size: 1.05rem; font-weight: 700; color: var(--navy); }
+.software-badges { margin: .3rem 0 .5rem; display: flex; gap: .4rem; flex-wrap: wrap; }
+
+.badge {
+  display: inline-block;
+  padding: .18rem .55rem;
+  border-radius: 3px;
+  font-size: .78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+}
+
+.badge-pypi   { background: #3775a9; color: #fff; }
+.badge-cran   { background: #276dc2; color: #fff; }
+.badge-ctan   { background: #328f3d; color: #fff; }
+.badge-github { background: #24292e; color: #fff; }
+.badge-r      { background: #276dc2; color: #fff; }
+
+.software-desc { font-size: .92rem; color: var(--text); margin-bottom: .4rem; }
+.software-links { font-size: .88rem; }
+.software-links a { margin-right: .8rem; }
+
+/* ===== Teaching ===== */
+.course-table { width: 100%; border-collapse: collapse; font-size: .93rem; }
+.course-table th { background: var(--navy); color: #fff; padding: .55rem .8rem; text-align: left; font-weight: 600; }
+.course-table td { padding: .5rem .8rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+.course-table tr:nth-child(even) td { background: var(--bg-alt); }
+
+/* ===== Other Stuff ===== */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.photo-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-alt);
+}
+
+.photo-card img { width: 100%; display: block; }
+
+.photo-caption {
+  padding: .6rem .8rem;
+  font-size: .88rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  padding: 1.2rem 2rem;
+  text-align: center;
+  font-size: .83rem;
+  color: var(--muted);
+}
+
+footer a { color: var(--muted); }
+footer a:hover { color: var(--link); }

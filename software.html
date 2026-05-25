@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software – Haim Bar, PhD</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="site-title"><a href="index.html">Haim Bar, PhD</a></div>
+    <div class="site-subtitle">Associate Professor of Statistics &nbsp;·&nbsp; University of Connecticut</div>
+    <nav><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications &amp; Papers</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="software.html" class="active">Software</a></li>
+        <li><a href="other.html">Other Stuff</a></li>
+    </ul></nav>
+  </div>
+</header>
+<main>
+  <h1>Software</h1>
+  <p>Packages developed by Haim Bar and collaborators, freely available on GitHub, CRAN, PyPI, and CTAN.</p>
+  <ul class="software-list">
+    <li class="software-item">
+      <div class="software-name">runcode — LaTeX Package for Reproducible Science</div>
+      <div class="software-badges"><span class="badge badge-ctan">CTAN</span> <span class="badge badge-github">GitHub</span></div>
+      <div class="software-desc">A LaTeX package that executes external code (R, Python, Julia, Matlab, and any command-line tool) from within a LaTeX document and embeds the output directly in the compiled PDF. Designed for fully reproducible scientific documents. Works in server mode via the <strong>talk2stat</strong> Python package. Available through TeX&nbsp;Live and MiKTeX.</div>
+      <div class="software-desc" style="color:var(--muted);">Version 2.4 &nbsp;·&nbsp; Co-authored with HaiYing Wang · License: LPPL 1.3c</div>
+      <div class="software-links"><a href="https://ctan.org/pkg/runcode" target="_blank" rel="noopener">CTAN page</a> <a href="https://github.com/Ossifragus/runcode" target="_blank" rel="noopener">GitHub</a> <a href="https://doi.org/10.6339/21-JDS998" target="_blank" rel="noopener">Paper (JDS 2021)</a></div>
+    </li>
+    <li class="software-item">
+      <div class="software-name">talk2stat — Python Package</div>
+      <div class="software-badges"><span class="badge badge-pypi">PyPI</span> <span class="badge badge-github">GitHub</span></div>
+      <div class="software-desc">Opens and manages a bidirectional socket connection to R, Julia, Python, or Matlab, enabling other programs (such as the <strong>runcode</strong> LaTeX package) to send code and receive output without re-launching the interpreter.</div>
+      <div class="software-desc" style="color:var(--muted);">Version 0.1.7 &nbsp;·&nbsp; Requires: pexpect</div>
+      <div class="software-links"><a href="https://pypi.org/project/talk2stat/" target="_blank" rel="noopener">PyPI</a> <a href="https://github.com/Ossifragus/talk2stat" target="_blank" rel="noopener">GitHub</a></div>
+    </li>
+    <li class="software-item">
+      <div class="software-name">loopmonitor — Loop Control for Long-Running Programs (Python)</div>
+      <div class="software-badges"><span class="badge badge-pypi">PyPI</span> <span class="badge badge-github">GitHub</span></div>
+      <div class="software-desc">Provides on-demand status queries and graceful control of long-running Python loops without interrupting execution. Drop-in replacements for <code>for</code> / <code>while</code> loops write a JSON state file after every iteration; an <code>ipc</code> command-line tool lets you peek at progress, plot tracked values, set variables, or break the loop from a second terminal. Companion R package also available.</div>
+      <div class="software-desc" style="color:var(--muted);">Version 0.1.2</div>
+      <div class="software-links"><a href="https://pypi.org/project/loopmonitor/" target="_blank" rel="noopener">PyPI</a> <a href="https://github.com/haimbar/loopmonitor" target="_blank" rel="noopener">GitHub</a></div>
+    </li>
+    <li class="software-item">
+      <div class="software-name">loopmonitor — Loop Control for Long-Running Programs (R)</div>
+      <div class="software-badges"><span class="badge badge-github">GitHub</span> <span class="badge badge-r">R</span></div>
+      <div class="software-desc">Provides <code>ipc_for()</code>, <code>ipc_while()</code>, and <code>ipc_repeat()</code> as drop-in replacements for R's loop constructs, enabling on-demand inspection and control of long-running loops from a second terminal using the <code>ipc</code> command-line tool. Status, tracked values, and ETA are written to a JSON state file after every iteration.</div>
+      <div class="software-desc" style="color:var(--muted);">Version 0.1.0 &nbsp;·&nbsp; Requires: jsonlite · Companion to the Python loopmonitor package</div>
+      <div class="software-links"><a href="https://github.com/haimbar/loopmonitor-r" target="_blank" rel="noopener">GitHub</a></div>
+    </li>
+    <li class="software-item">
+      <div class="software-name">edgefinder — Gene Network Inference (Python)</div>
+      <div class="software-badges"><span class="badge badge-pypi">PyPI</span> <span class="badge badge-github">GitHub</span></div>
+      <div class="software-desc">Recovers gene network structure from co-expression data using a mixture-model approach based on convex geometry and beta distributions. Controls edge detection error rates without assuming network sparsity. Includes simulation code and case studies.</div>
+      <div class="software-desc" style="color:var(--muted);">Version 0.1.10</div>
+      <div class="software-links"><a href="https://pypi.org/project/edgefinder/" target="_blank" rel="noopener">PyPI</a> <a href="https://doi.org/10.1371/journal.pone.0246945" target="_blank" rel="noopener">Paper (PLOS ONE 2021)</a> <a href="https://doi.org/10.1016/j.csda.2023.107800" target="_blank" rel="noopener">Paper (CSDA 2023)</a></div>
+    </li>
+    <li class="software-item">
+      <div class="software-name">QREM — Quantile Regression via EM Algorithm (R)</div>
+      <div class="software-badges"><span class="badge badge-github">GitHub</span> <span class="badge badge-r">R</span></div>
+      <div class="software-desc">Implements mixed-effects quantile regression and variable selection via an EM algorithm. Suitable for high-dimensional settings where standard quantile regression methods may be unstable.</div>
+      <div class="software-desc" style="color:var(--muted);">Version 0.2.1</div>
+      <div class="software-links"><a href="https://github.com/haimbar/QREM" target="_blank" rel="noopener">GitHub</a> <a href="https://doi.org/10.1177/1471082X211033490" target="_blank" rel="noopener">Paper (Statistical Modelling 2021)</a></div>
+    </li>
+    <li class="software-item">
+      <div class="software-name">SEMMS — Scalable EMpirical Bayes Model Selection (R)</div>
+      <div class="software-badges"><span class="badge badge-github">GitHub</span> <span class="badge badge-r">R</span></div>
+      <div class="software-desc">Variable selection for generalized linear models using a scalable empirical Bayes approach. Suitable for high-dimensional problems where the number of predictors is large relative to sample size.</div>
+      <div class="software-desc" style="color:var(--muted);">Version 0.2.5 &nbsp;·&nbsp; Includes datasets and vignette</div>
+      <div class="software-links"><a href="https://doi.org/10.1080/10618600.2019.1706542" target="_blank" rel="noopener">Paper (JCGS 2020)</a> <a href="https://arxiv.org/abs/2603.15902" target="_blank" rel="noopener">arXiv</a></div>
+    </li>
+    <li class="software-item">
+      <div class="software-name">DVX — Differential Variation and Expression (R)</div>
+      <div class="software-badges"><span class="badge badge-github">GitHub</span> <span class="badge badge-r">R</span></div>
+      <div class="software-desc">An interactive R program for simultaneous analysis of differential variation and differential expression in genomic data.</div>
+      <div class="software-links"><a href="https://doi.org/10.1002/sta4.237" target="_blank" rel="noopener">Paper (Stat 2019)</a></div>
+    </li>
+    <li class="software-item">
+      <div class="software-name">R-CMap — Concept Mapping Software (R)</div>
+      <div class="software-badges"><span class="badge badge-github">GitHub</span> <span class="badge badge-r">R</span></div>
+      <div class="software-desc">Open-source concept mapping software. Provides tools for data collection, multidimensional scaling, cluster analysis, and visualization. Used in social sciences, public health, and education research.</div>
+      <div class="software-desc" style="color:var(--muted);">Version 0.3.4</div>
+      <div class="software-links"><a href="https://github.com/haimbar/RCMap" target="_blank" rel="noopener">GitHub</a> <a href="https://doi.org/10.1016/j.evalprogplan.2016.08.018" target="_blank" rel="noopener">Paper (Evaluation and Program Planning 2017)</a></div>
+    </li>
+    <li class="software-item">
+      <div class="software-name">betaMix — Beta Mixture Models for Correlation (R)</div>
+      <div class="software-badges"><span class="badge badge-github">GitHub</span> <span class="badge badge-r">R</span></div>
+      <div class="software-desc">Identifies significant correlations in high-dimensional data using a mixture of beta distributions framework. Applications include graphical model selection and network inference. Also available in Python (betaMixPy).</div>
+      <div class="software-desc" style="color:var(--muted);">Version 0.3.3</div>
+      <div class="software-links"><a href="https://github.com/haimbar/betaMix" target="_blank" rel="noopener">GitHub (R)</a> <a href="https://github.com/haimbar/betaMixPy" target="_blank" rel="noopener">GitHub (Python)</a> <a href="https://doi.org/10.1016/j.csda.2023.107800" target="_blank" rel="noopener">Paper (CSDA 2023)</a></div>
+    </li>
+    <li class="software-item">
+      <div class="software-name">Spatial Capture-Recapture MCMC Code (R)</div>
+      <div class="software-badges"><span class="badge badge-github">GitHub</span> <span class="badge badge-r">R</span></div>
+      <div class="software-desc">Bayesian MCMC implementation for a spatial capture-recapture model with inter-individual attraction terms. Estimates animal abundance and movement patterns.</div>
+      <div class="software-desc" style="color:var(--muted);">Co-authored with Paul McLaughlin, PhD</div>
+      <div class="software-links"><a href="https://doi.org/10.1002/env.2653" target="_blank" rel="noopener">Paper (Environmetrics 2021)</a></div>
+    </li>
+  </ul>
+</main>
+<footer>
+  <p>Haim Bar &nbsp;·&nbsp; Department of Statistics, University of Connecticut
+  &nbsp;·&nbsp; <a href="mailto:haim.bar@uconn.edu">haim.bar@uconn.edu</a></p>
+</footer>
+</body>
+</html>
