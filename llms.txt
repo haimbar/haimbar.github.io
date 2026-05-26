@@ -1,0 +1,63 @@
+# Haim Bar, PhD — Personal Academic Website
+
+## Who I am
+
+Haim Bar is an Associate Professor of Statistics at the University of Connecticut (UConn), Storrs, CT. He received his Ph.D. in Statistics from Cornell University in 2012, an M.Sc. in Computer Science from Yale University, and a B.Sc. in Mathematics (Cum Laude) from The Hebrew University of Jerusalem.
+
+Email: haim.bar@uconn.edu
+Office: Room 315, Philip E. Austin Building, Department of Statistics, UConn
+
+## Research Interests
+
+- Empirical Bayes methods and mixture models
+- Variable selection in high-dimensional generalized linear models
+- Graphical models and gene network inference
+- Quantile regression (mixed-effects, variable selection)
+- Multiple testing and false discovery rate control
+- Statistical genomics: microarray, RNA-seq, codon usage analysis
+- Reproducible research (literate programming with LaTeX)
+
+## Affiliations
+
+- Institute for Systems Genomics (ISG), UConn
+- Institute for Collaboration on Health, Intervention, and Policy (InCHIP), UConn
+- CT Institute for the Brain and Cognitive Sciences (IBACS), UConn
+
+## Selected Publications (recent)
+
+- Bar, H.; Pozdnyakov, V. "High Dimensional Space Oddity." The American Statistician (2025). https://doi.org/10.1080/00031305.2025.2505507
+- Clement et al.; Bar, H. "Uncovering position-specific patterns in codon and codon-pair usage in candidate genes associated with blood coagulation diseases." NAR Genomics and Bioinformatics (2025). https://doi.org/10.1093/nargab/lqaf169
+- Nguyen, H.; Bar, H.; Chi, Z.; Pozdnyakov, V. "A Time-Varying Branching Process Approach to Model Self-Renewing Cells." Methodology and Computing in Applied Probability (2026). https://doi.org/10.1007/s11009-026-10270-1
+- Bar, H.; Wells, M. "On graphical models and convex geometry." Computational Statistics & Data Analysis (2023). https://doi.org/10.1016/j.csda.2023.107800
+- Bar, H.; Booth, J.; Wells, M. "A Scalable Empirical Bayes Approach to Variable Selection in Generalized Linear Models." Journal of Computational and Graphical Statistics (2020). https://doi.org/10.1080/10618600.2019.1706542
+- Bar, H.; Booth, J.; Wells, M. "Laplace Approximated EM Microarray Analysis: An Empirical Bayes Approach for Comparative Microarray Experiments." Statistical Science (2010). https://doi.org/10.1214/10-STS339
+
+Full publication list: https://haimbar.github.io/publications.html
+
+## Software
+
+- **runcode** (LaTeX/CTAN): Executes external code from within LaTeX documents for reproducible science. https://ctan.org/pkg/runcode
+- **talk2stat** (Python/PyPI): Socket-based server for running R, Julia, Python, or Matlab from external programs. https://pypi.org/project/talk2stat/
+- **edgefinder** (Python/PyPI): Gene network inference via mixture models and convex geometry. https://pypi.org/project/edgefinder/
+- **SEMMS** (R): Scalable empirical Bayes variable selection for GLMs. https://arxiv.org/abs/2603.15902
+- **QREM** (R): Mixed-effects quantile regression via EM algorithm.
+- **betaMix** (R/Python): Beta mixture models for identifying significant correlations in high-dimensional data.
+- **R-CMap** (R): Open-source concept mapping software. https://github.com/haimbar/RCMap
+- **loopmonitor** (Python/R): On-demand status and control of long-running loops.
+- **DVX** (R): Differential variation and expression analysis for genomic data.
+
+Full software list: https://haimbar.github.io/software.html
+
+## Teaching (UConn)
+
+Applied Statistics I & II, Design of Experiments, Statistical Computing, Data Management in SAS and R, Statistical Consulting, Categorical Data Analysis, Introduction to Applied Statistics.
+
+Ph.D. students advised: Huyen Nguyen (2026), Kangyan Liu (2019), Paul McLaughlin (2019).
+
+## Links
+
+- Website: https://haimbar.github.io
+- GitHub: https://github.com/haimbar
+- LinkedIn: https://www.linkedin.com/in/haim-bar-45a3612/
+- UConn faculty page: https://statistics.uconn.edu/person/haim-bar/
+- CV: https://haimbar.github.io/HYB_CV.pdf
