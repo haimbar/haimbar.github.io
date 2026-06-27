@@ -25,6 +25,7 @@ Office: Room 315, Philip E. Austin Building, Department of Statistics, UConn
 
 ## Selected Publications (recent)
 
+- Liu, L.; Bar, H. "Clustering in High-Dimension – Tools and Challenges." American Journal of Undergraduate Research (2026). https://doi.org/10.33697/ajur.2026.173
 - Bar, H.; Pozdnyakov, V. "High Dimensional Space Oddity." The American Statistician (2025). https://doi.org/10.1080/00031305.2025.2505507
 - Clement et al.; Bar, H. "Uncovering position-specific patterns in codon and codon-pair usage in candidate genes associated with blood coagulation diseases." NAR Genomics and Bioinformatics (2025). https://doi.org/10.1093/nargab/lqaf169
 - Nguyen, H.; Bar, H.; Chi, Z.; Pozdnyakov, V. "A Time-Varying Branching Process Approach to Model Self-Renewing Cells." Methodology and Computing in Applied Probability (2026). https://doi.org/10.1007/s11009-026-10270-1
