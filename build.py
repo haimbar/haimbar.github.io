@@ -19,7 +19,7 @@ SW_OUT  = ROOT / "software.html"
 
 # ── Shared page shell ────────────────────────────────────────────────────
 
-def page(title, active, body):
+def page(title, active, body, description=None):
     tabs = [
         ("index.html",        "Home"),
         ("publications.html", "Publications &amp; Papers"),
@@ -31,12 +31,13 @@ def page(title, active, body):
         f'        <li><a href="{h}"{" class=\"active\"" if h == active else ""}>{lbl}</a></li>'
         for h, lbl in tabs
     )
+    desc_tag = f'\n  <meta name="description" content="{description}">' if description else ''
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title}</title>
+  <title>{title}</title>{desc_tag}
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -314,6 +315,8 @@ def fmt_entry(f):
         if vol_ok:              detail += f', {volume}'
         if vol_ok and num_ok:   detail += f'({number})'
         if pages:               detail += f', {pages}'
+        status = clean(f.get('status', ''))
+        if status:               detail += f', {status}'
         journal_html = f'<em>{detail}</em>.'
 
     return (
@@ -467,6 +470,22 @@ def fetch_version(source):
 # For github sources, name is "owner/repo"
 
 SOFTWARE = [
+    {
+        'name':    'RNA_lexis — Probabilistic RNA Sequence Segmentation (Python)',
+        'badges':  [('PyPI', 'badge-pypi'), ('GitHub', 'badge-github'), ('Zenodo', 'badge-zenodo')],
+        'ver_src': ('pypi', 'RNA-lexis'),
+        'ver_note':'Co-authored with Assaf Bester &middot; Paper (with Amit Felach) accepted at Nucleic Acids Research (in press)',
+        'desc': (
+            'A probabilistic algorithm that uses a non-parametric segmentation logic to detect '
+            'meaningful sequences in RNA. Explores RNA data to identify statistically significant '
+            'segments without assuming a fixed distributional model.'
+        ),
+        'links': [
+            ('PyPI',        'https://pypi.org/project/RNA-lexis/'),
+            ('GitHub',      'https://github.com/haimbar/RNA_lexis'),
+            ('Zenodo (data/code archive)', 'https://doi.org/10.5281/zenodo.21744120'),
+        ],
+    },
     {
         'name':    'runcode — LaTeX Package for Reproducible Science',
         'badges':  [('CTAN', 'badge-ctan'), ('GitHub', 'badge-github')],
@@ -682,7 +701,12 @@ def build_software():
         + '\n'.join(items)
         + '\n  </ul>'
     )
-    SW_OUT.write_text(page('Software – Haim Bar, PhD', 'software.html', body),
+    sw_description = (
+        "Open-source statistical software by Haim Bar: RNA_lexis, runcode (LaTeX reproducible "
+        "science), talk2stat, edgefinder, SEMMS, QREM, betaMix, DVX, R-CMap, and loopmonitor. "
+        "Available on CRAN, PyPI, CTAN, Zenodo, and GitHub."
+    )
+    SW_OUT.write_text(page('Software – Haim Bar, PhD', 'software.html', body, sw_description),
                       encoding='utf-8')
     print(f"software.html written  ({len(SOFTWARE)} packages)")
 

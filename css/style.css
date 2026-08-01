@@ -214,6 +214,7 @@ p { margin-bottom: .9rem; }
 .badge-ctan   { background: #328f3d; color: #fff; }
 .badge-github { background: #24292e; color: #fff; }
 .badge-r      { background: #276dc2; color: #fff; }
+.badge-zenodo { background: #1682d4; color: #fff; }
 
 .software-desc { font-size: .92rem; color: var(--text); margin-bottom: .4rem; }
 .software-links { font-size: .88rem; }
